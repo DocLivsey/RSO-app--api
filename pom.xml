@@ -12,7 +12,7 @@
     <artifactId>rso_app_api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>RsoAppApi</name>
-    <description>RsoAppApi</description>
+    <description>This is the rso application api</description>
     <url/>
     <licenses>
         <license/>
@@ -27,7 +27,14 @@
         <url/>
     </scm>
     <properties>
-        <java.version>17</java.version>
+        <java.version>22</java.version>
+
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <lombok.version>1.18.30</lombok.version>
+
+        <application.name>RsoAppApi</application.name>
+        <application.version>0.0.1-SNAPSHOT</application.version>
+        <application.description>This is the rso application api</application.description>
     </properties>
     <dependencies>
         <dependency>
