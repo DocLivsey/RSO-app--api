@@ -2,6 +2,8 @@ package dclvs.rso_app;
 
 public final class Constants {
 
+    public static final String UNDEFINED = "undefined";
+
     public static final String RESET = "\u001B[0m";
     public static final String ERROR = "\u001B[31m"; // RED
     public static final String INPUT = "\u001B[32m"; // GREEN
