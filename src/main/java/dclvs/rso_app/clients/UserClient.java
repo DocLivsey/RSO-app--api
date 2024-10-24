@@ -4,10 +4,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "user-server", url = "http://localhost:8080/user")
+@FeignClient(name = "user-server", url = "${server.url.base}${server.url.user}")
 public interface UserClient {
 
-    @GetMapping("/all")
+    @GetMapping("${server.url.user.all}")
     ResponseEntity<?> getAllUsersOnEvent(Long eventId);
 
 }
