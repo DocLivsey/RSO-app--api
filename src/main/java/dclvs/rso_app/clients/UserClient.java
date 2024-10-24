@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserClient {
 
     @GetMapping("${server.url.user.all}")
-    ResponseEntity<?> getAllUsersOnEvent(@RequestParam("eventId") Long eventId);
+    ResponseEntity<?> getAllUsersOnEvent(@RequestParam Long eventId);
 
 }
