@@ -1,24 +1,18 @@
-# Указываем базовый образ с поддержкой Java
-FROM maven:3.9.5-eclipse-temurin-17 AS builder
+FROM maven:3.9.6-eclipse-temurin-22 AS builder
 
-# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем файлы проекта в контейнер
 COPY pom.xml .
+RUN mvn dependency:go-offline -B
+
 COPY src ./src
 
-# Собираем проект в архив .jar
 RUN mvn clean package -DskipTests
 
-# Используем легковесный JRE-образ для запуска
-FROM eclipse-temurin:17-jre
+FROM amazoncorretto:22
 
-# Указываем рабочую директорию для приложения
 WORKDIR /app
 
-# Копируем собранный jar из предыдущего этапа
 COPY --from=builder /app/target/*.jar app.jar
 
-# Указываем команду запуска
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "--enable-preview", "-jar", "app.jar"]
