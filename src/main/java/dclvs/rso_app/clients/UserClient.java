@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "user-server", url = "${server.url.base}${server.url.user}")
+@FeignClient(name = "user-server", url = "${server.url.host}${server.url.user}")
 public interface UserClient {
 
     @GetMapping("${server.url.user.all}")
