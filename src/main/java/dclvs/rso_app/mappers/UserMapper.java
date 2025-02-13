@@ -42,7 +42,7 @@ public interface UserMapper {
     // TODO: check in database how birthday was wrote in table
     @Named("mapBirthday")
     default String map(Calendar birthday) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         return simpleDateFormat.format(birthday.getTime());
     }
 
