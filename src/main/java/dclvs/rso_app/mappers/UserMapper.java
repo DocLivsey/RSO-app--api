@@ -39,7 +39,6 @@ public interface UserMapper {
         return password.getPassword();
     }
 
-    // TODO: check in database how birthday was wrote in table
     @Named("mapBirthday")
     default String map(Calendar birthday) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
