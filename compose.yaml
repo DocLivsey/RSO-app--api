@@ -16,7 +16,7 @@ x-spring-api-variables: &api-variables
   REMOVE_EVENT_ENDPOINT: /remove
 services:
   api:
-    container_name: rso-app-server
+    container_name: rso-app-api
     build:
       context: .
       dockerfile: Dockerfile
