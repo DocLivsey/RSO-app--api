@@ -31,6 +31,7 @@
 
         <lombok.version>1.18.30</lombok.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <swaggerui.version>2.4.0</swaggerui.version>
         <feign.client.version>4.1.1</feign.client.version>
 
         <application.name>RsoAppApi</application.name>
@@ -80,6 +81,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>${feign.client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${swaggerui.version}</version>
         </dependency>
     </dependencies>
 
