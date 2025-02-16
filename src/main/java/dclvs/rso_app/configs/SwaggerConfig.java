@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @RequiredArgsConstructor
-@PropertySource("/application.properties")
+@PropertySource("classpath:application.properties")
 public class SwaggerConfig {
 
     private final Environment environment;
