@@ -1,5 +1,6 @@
 package dclvs.rso_app.entities;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@Schema(title = "Container for user's data", description = "Пользовательские данные")
 public class UserReceiver {
 
     private Long userId;
